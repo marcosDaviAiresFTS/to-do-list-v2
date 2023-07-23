@@ -25,18 +25,20 @@ function puxarValorParaArrayItens(CampoTxt) {
 }
 
 
-const ol = document.createElement('ol')
-body.appendChild(ol)
-containerDeItens.appendChild(ol)
+const ul = document.createElement('ul')
+body.appendChild(ul)
+containerDeItens.appendChild(ul)
 
 function adicionarItemATela() {
-  console.log(itemAdicionado)
+  ul.innerHTML = ""
   itemAdicionado.forEach(item => {
     const li = document.createElement('li')
-    ol.appendChild(li)
-    li.innerHTML = item
-    console.log(itemAdicionado)
+    ul.appendChild(li);
+    li.innerHTML = item;
+    li.className = "itensDaLista";
   })
+  console.log(ul)
+  console.log(itemAdicionado)
 }
 
 
